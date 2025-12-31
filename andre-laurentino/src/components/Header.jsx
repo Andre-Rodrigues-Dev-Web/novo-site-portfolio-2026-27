@@ -3,19 +3,19 @@ import logo from '../assets/imgs/logo.svg';
 import { FiMenu } from 'react-icons/fi';
 
 const HeaderContainer = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%; /* Match page padding */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
+  z-index: 10;
 `;
 
 const Logo = styled.img`
-  height: 50px;
+  height: 80px;
   /* Adjust based on actual SVG/design need */
 `;
 
@@ -35,11 +35,7 @@ const LogoContainer = styled.div`
         width: 120px;
         height: 80px;
         background: #0a0a0a;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
         z-index: -1;
-        border: 1px solid rgba(255,255,255,0.1);
-        border-top: none;
     }
 `;
 
@@ -58,7 +54,7 @@ const MenuButton = styled.button`
   }
 `;
 
-const Header = () => {
+const Header = ({ onMenuClick }) => {
     return (
         <HeaderContainer>
             <div /> {/* Spacer for left side if needed */}
@@ -67,7 +63,7 @@ const Header = () => {
                 <Logo src={logo} alt="André Laurentino Logo" />
             </LogoContainer>
 
-            <MenuButton>
+            <MenuButton onClick={onMenuClick}>
                 <span>Menu</span>
                 <FiMenu size={24} />
             </MenuButton>
