@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import logo from '../assets/imgs/logo.svg';
-import { FiMenu } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -54,7 +54,15 @@ const MenuButton = styled.button`
   }
 `;
 
-const Header = ({ onMenuClick }) => {
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: ${({ isOpen }) => isOpen ? 'rotate(90deg)' : 'rotate(0deg)'};
+`;
+
+const Header = ({ onMenuClick, isMenuOpen = false }) => {
     return (
         <HeaderContainer>
             <div /> {/* Spacer for left side if needed */}
@@ -63,9 +71,11 @@ const Header = ({ onMenuClick }) => {
                 <Logo src={logo} alt="André Laurentino Logo" />
             </LogoContainer>
 
-            <MenuButton onClick={onMenuClick}>
-                <span>Menu</span>
-                <FiMenu size={24} />
+            <MenuButton onClick={onMenuClick} aria-label={isMenuOpen ? "Fechar Menu" : "Abrir Menu"}>
+                <span>{isMenuOpen ? 'Fechar' : 'Menu'}</span>
+                <IconWrapper isOpen={isMenuOpen}>
+                    {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+                </IconWrapper>
             </MenuButton>
         </HeaderContainer>
     );

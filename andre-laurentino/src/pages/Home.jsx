@@ -11,6 +11,8 @@ import NewsSection from '../components/NewsSection';
 import WhatsAppButton from '../components/WhatsAppButton';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+import ScrollReveal from '../components/ScrollReveal';
+
 import profileImg from '../assets/imgs/eu.png';
 import cvFile from '../assets/docs/profile.pdf';
 import {
@@ -33,53 +35,70 @@ const Home = () => {
                 title="Página Inicial"
                 description="Portfólio de André Laurentino. Desenvolvedor Full Stack especializado em React, Node.js e soluções web de alta performance."
             />
-            <Header onMenuClick={() => setIsSidebarOpen(true)} />
+            <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} isMenuOpen={isSidebarOpen} />
             <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
             <SideNav />
 
             <ContentWrapper>
-                <TextSection>
-                    <Title>
-                        Seja bem-vindo<br />
-                        ao meu site!
-                    </Title>
-                    <Description>
-                        Desenvolvo aplicações web de alta performance, unindo escalabilidade técnica e excelência em UX.
-                    </Description>
-                    <ButtonGroup>
-                        <Button
-                            as="a"
-                            href="https://github.com/Andre-Rodrigues-Dev-Web"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="primary"
-                            aria-label="Ver GitHub"
-                        >
-                            Confira meu GitHub
-                            <FiGithub />
-                        </Button>
-                        <Button 
-                            as="a"
-                            href={cvFile}
-                            download="Andre-Laurentino-CV.pdf"
-                            variant="secondary" 
-                            aria-label="Baixar CV"
-                        >
-                            Baixar meu CV
-                            <FiFileText />
-                        </Button>
-                    </ButtonGroup>
-                </TextSection>
+                <ScrollReveal>
+                    <TextSection>
+                        <Title>
+                            Seja bem-vindo<br />
+                            ao meu site!
+                        </Title>
+                        <Description>
+                            Desenvolvo aplicações web de alta performance, unindo escalabilidade técnica e excelência em UX.
+                        </Description>
+                        <ButtonGroup>
+                            {/* Buttons */}
+                            <Button
+                                as="a"
+                                href="https://github.com/Andre-Rodrigues-Dev-Web"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                variant="primary"
+                                aria-label="Ver GitHub"
+                            >
+                                Confira meu GitHub
+                                <FiGithub />
+                            </Button>
+                            <Button 
+                                as="a"
+                                href={cvFile}
+                                download="Andre-Laurentino-CV.pdf"
+                                variant="secondary" 
+                                aria-label="Baixar CV"
+                            >
+                                Baixar meu CV
+                                <FiFileText />
+                            </Button>
+                        </ButtonGroup>
+                    </TextSection>
+                </ScrollReveal>
 
-                <ImageSection>
-                    <ProfileImage src={profileImg} alt="André Laurentino" />
-                </ImageSection>
+                <ScrollReveal>
+                    <ImageSection>
+                        <ProfileImage src={profileImg} alt="André Laurentino" />
+                    </ImageSection>
+                </ScrollReveal>
             </ContentWrapper>
 
-            <AboutMe />
-            <Technologies />
-            <Portfolio />
-            <NewsSection />
+            <ScrollReveal>
+                <AboutMe />
+            </ScrollReveal>
+            
+            <ScrollReveal>
+                <Technologies />
+            </ScrollReveal>
+            
+            <ScrollReveal>
+                <Portfolio />
+            </ScrollReveal>
+            
+            <ScrollReveal>
+                <NewsSection />
+            </ScrollReveal>
+            
             <WhatsAppButton />
             <Footer />
         </Container>

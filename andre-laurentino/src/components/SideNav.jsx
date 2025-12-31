@@ -69,20 +69,34 @@ const SideNav = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY + 300; // Offset
+            const viewportHeight = window.innerHeight;
+            // Point of interest: 40% down from the top of the viewport
+            const triggerPoint = viewportHeight * 0.4;
+            
+            let current = 'top';
 
             sections.forEach(section => {
                 const element = document.getElementById(section.id);
                 if (element) {
-                    const { offsetTop, offsetHeight } = element;
-                    if (
-                        scrollPosition >= offsetTop &&
-                        scrollPosition < offsetTop + offsetHeight
-                    ) {
-                        setActiveSection(section.id);
+                    const rect = element.getBoundingClientRect();
+                    // Check if the section's top is "above" the trigger point
+                    // And its bottom is still "below" the trigger point (meaning we are inside it)
+                    
+                    // Special case for 'top' which might wrap everything. 
+                    // We treat 'top' as default, but specific sections take precedence if they are in view.
+                    if (section.id === 'top') {
+                        // "top" is always a fallback if we are at the very top
+                        if (window.scrollY < 100) current = 'top';
+                    } else {
+                        // For specific sections
+                        if (rect.top <= triggerPoint && rect.bottom >= triggerPoint) {
+                            current = section.id;
+                        }
                     }
                 }
             });
+
+            setActiveSection(current);
         };
 
         window.addEventListener('scroll', handleScroll);
