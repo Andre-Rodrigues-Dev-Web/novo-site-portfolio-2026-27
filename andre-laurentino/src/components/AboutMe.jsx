@@ -26,6 +26,9 @@ const AboutMe = () => {
                     <BioText>
                         Engenheiro de software com certificação AWS, Oracle, NodeJS, IoT, Blockchain e DataDog.
                     </BioText>
+                    <BioText>
+                        Como referência técnica na área, combino liderança estratégica com profundidade em engenharia. Atuo ativamente como palestrante em eventos de tecnologia, dissecando arquiteturas complexas e boas práticas. Minha dedicação contínua ao estudo e à escrita de artigos técnicos reflete meu compromisso em elevar o nível da comunidade de desenvolvimento Brasileiro.
+                    </BioText>
                 </BioColumn>
 
                 <InfoColumn>
