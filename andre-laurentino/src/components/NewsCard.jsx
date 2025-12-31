@@ -18,12 +18,23 @@ const Card = styled.div`
   }
 `;
 
+import fallbackImage from '../assets/posts/imagem-tech.png';
+
 const ImageContainer = styled.div`
   height: 200px;
-  background-color: #222; /* Placeholder color */
-  background-image: ${({ image }) => (image ? `url(${image})` : 'none')};
-  background-size: cover;
-  background-position: center;
+  background-color: #222;
+  overflow: hidden;
+  
+  img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+  }
+
+  ${Card}:hover & img {
+      transform: scale(1.1);
+  }
 `;
 
 const Content = styled.div`
@@ -73,7 +84,16 @@ const ReadMore = styled(Link)`
 const NewsCard = ({ id, image, category, title, excerpt }) => {
     return (
         <Card>
-            <ImageContainer image={image} />
+            <ImageContainer>
+                <img 
+                    src={image || fallbackImage} 
+                    alt={title}
+                    onError={(e) => {
+                        e.target.onerror = null; 
+                        e.target.src = fallbackImage; 
+                    }}
+                />
+            </ImageContainer>
             <Content>
                 <Category>{category}</Category>
                 <Title>{title}</Title>

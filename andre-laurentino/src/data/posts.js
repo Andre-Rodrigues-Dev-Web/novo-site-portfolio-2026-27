@@ -1,23 +1,35 @@
+import { postImages } from './postImages';
+
 export const posts = [
     {
         id: 1,
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[1],
         category: 'Tecnologia',
         title: 'O Futuro do Desenvolvimento Web com IA',
         excerpt: 'Como a inteligência artificial está transformando a maneira como escrevemos código e criamos interfaces.',
         content: `
-            <p>A inteligência artificial (IA) deixou de ser uma promessa futurista para se tornar uma ferramenta indispensável no dia a dia de desenvolvedores web.</p>
-            <h3>Automatização de Código</h3>
-            <p>Ferramentas como GitHub Copilot e ChatGPT estão permitindo que engenheiros escrevam boilerplate, testes e até funções complexas em segundos.</p>
-            <h3>Otimização de Interfaces</h3>
-            <p>Além do código, a IA está ajudando a criar interfaces mais intuitivas e personalizadas para os usuários final.</p>
-            <p>Conclusão: A IA não vai substituir os desenvolvedores, mas os desenvolvedores que usam IA vão substituir os que não usam.</p>
+            <p>Estamos vivendo a maior mudança de paradigma no desenvolvimento de software desde o surgimento da web. A Inteligência Artificial Generativa não é apenas uma ferramenta de "autocompletar" glorificada; ela está redefinindo fundamentalmente o papel do engenheiro de software.</p>
+            
+            <h3>1. Do Código à Arquitetura</h3>
+            <p>Ferramentas como GitHub Copilot, Cursor e Claude 3.5 Sonnet já escrevem 40-60% do código "boilerplate" em projetos modernos. Isso significa que o valor do desenvolvedor está migrando da <em>sintaxe</em> para a <em>semântica</em>. Não somos mais pagos apenas para digitar <code>function</code>, mas para saber <strong>qual</strong> função deve ser criada, como ela se conecta à arquitetura e se é segura.</p>
+
+            <h3>2. Interfaces Generativas (Generative UI)</h3>
+            <p>O conceito de "pixel perfect" estático está morrendo. Com a IA, estamos caminhando para interfaces que se desenham em tempo real baseadas no contexto do usuário. Imagine um dashboard que, ao invés de ter widgets fixos, gera visualizações específicas baseadas na pergunta que o usuário fez ao banco de dados naquele momento. Ferramentas como o <strong>v0.dev</strong> da Vercel já mostram o início dessa era.</p>
+
+            <h3>3. A Morte do "Junior"? Não. A Ascensão do "Architect-Junior"</h3>
+            <p>Existe um medo real de que a IA substitua desenvolvedores júnior. A realidade é mais sutil: a IA <strong>capacita</strong> o júnior a atuar como sênior, desde que ele tenha fundamentos sólidos. O risco está para quem decorar frameworks sem entender a base (HTTP, DOM, Estrutura de Dados). Quem entende os fundamentos agora tem um exército de estagiários digitais (IAs) para executar o trabalho braçal.</p>
+
+            <h3>4. Testes e Manutenção Autônomos</h3>
+            <p>Agentes autônomos já conseguem varrer bases de código, identificar bugs, escrever testes unitários e abrir Pull Requests com a correção. Em 2026, a revisão de código humano será focada em lógica de negócios e segurança, enquanto a limpeza de código, tipagem e testes serão commodities geridas por LLMs.</p>
+
+            <h3>Conclusão</h3>
+            <p>O futuro do desenvolvimento web não é "sem código" (No-Code), mas sim "muito código gerado". A habilidade crítica de 2026 não é saber a sintaxe do React de cabeça, mas ter a visão sistêmica para orquestrar IAs na construção de produtos robustos, acessíveis e performáticos.</p>
         `,
-        date: '31 de Dezembro, 2025'
+        date: '31/12/2025'
     },
     {
         id: 2,
-        image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[2],
         category: 'Desenvolvimento',
         title: 'Deno 2.6: Chegou o dx, TSGO e Segurança Granular',
         excerpt: 'Descubra as novidades do Deno 2.6, incluindo o novo executor de pacotes dx, verificação de tipos 2x mais rápida e auditoria de vulnerabilidades nativa.',
@@ -36,11 +48,11 @@ export const posts = [
                 value: '<p>Diferente do npx, o dx avisa antes de baixar pacotes e bloqueia scripts de ciclo de vida por padrão, a menos que você os aprove explicitamente.</p><h3>TSGO: Verificação de Tipos Ultra-rápida</h3><p>Esta versão integra o <strong>TSGO</strong>, um novo verificador de tipos experimental escrito em Go. Ele oferece uma melhoria de velocidade de até 2x em relação à implementação anterior. Você pode ativá-lo com a flag <code>--unstable-tsgo</code>.</p><h3>Segurança e Auditoria</h3><p>A segurança continua sendo prioridade com duas grandes adições:</p><ul><li><strong>Permissões Granulares:</strong> Novas flags como <code>--ignore-read</code> e <code>--ignore-env</code> permitem negar acesso a arquivos ou variáveis específicas sem quebrar a aplicação (retornando <em>NotFound</em> ou <em>undefined</em> em vez de erros de permissão).</li><li><strong>Deno Audit:</strong> O novo comando <code>deno audit</code> verifica vulnerabilidades em suas dependências consultando o banco de dados CVE do GitHub e, opcionalmente, o socket.dev.</li></ul><h3>Compatibilidade com Node.js</h3><p>O Deno 2.6 melhora ainda mais a compatibilidade com o ecossistema Node. Agora, os tipos <code>@types/node</code> são incluídos por padrão, garantindo autocompletar e segurança de tipos sem configuração extra. Além disso, foi adicionada a flag <code>--require</code> para pré-carregar módulos CommonJS.</p><p>Com melhorias no V8 (versão 14.2) e otimizações de memória, o Deno 2.6 se consolida como uma ferramenta poderosa para desenvolvimento web moderno.</p>'
             }
         ],
-        date: '31 de Dezembro, 2025'
+        date: '24/12/2025'
     },
     {
         id: 3,
-        image: 'https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[3],
         category: 'Arquitetura de Software',
         title: 'Guia Definitivo: Upload e Streaming de Arquivos Gigantes na AWS com PHP, Node e .NET',
         excerpt: 'Pare de queimar CPU e pagar taxas de saída excessivas. Um deep dive em Presigned URLs, Multipart Uploads, S3 Intelligent-Tiering e CloudFront.',
@@ -112,11 +124,11 @@ return Ok(new { url });`
                 value: '<h3>2. Otimização de Custos de Armazenamento (S3 Lifecycle)</h3><p>Armazenar Terabytes de dados é caro. A maioria dos vídeos é acessada frequentemente apenas na primeira semana.</p><p>Configure uma <strong>Lifecycle Rule</strong> no seu bucket:</p><ul><li><strong>Dia 0-30:</strong> <em>S3 Standard</em> (Acesso rápido e frequente).</li><li><strong>Dia 31+:</strong> Mover automaticamente para <em>S3 Intelligent-Tiering</em> ou <em>S3 One Zone-IA</em> (Economia de até 20-40%).</li><li><strong>Dia 365+:</strong> Mover para <em>S3 Glacier Deep Archive</em> (para logs ou backups legais, custo ínfimo).</li></ul><h3>3. Processamento de Mídia (MediaConvert vs Lambda)</h3><p>Nunca processe vídeo na sua API. Use arquitetura orientada a eventos:</p><ol><li>O upload termina no S3.</li><li>O S3 envia um evento para o <strong>EventBridge</strong>.</li><li><strong>Imagens:</strong> EventBridge aciona uma Lambda (Node.js com "Sharp") para gerar thumbnails e converter para WebP/AVIF.</li><li><strong>Vídeos:</strong> EventBridge aciona um job no <strong>AWS Elemental MediaConvert</strong>. Ele transcodifica o vídeo para HLS (streaming adaptativo) automaticamente, criando playlists .m3u8 para diferentes bitrates.</li></ol><h3>4. Entrega e Segurança (CloudFront & OAC)</h3><p>Para evitar cobranças de "Data Transfer Out" do S3 para a internet pública, use o CloudFront. O tráfego do S3 para o CloudFront é gratuito.</p><p><strong>Segurança (Private Content):</strong> Se o conteúdo for pago (ex: curso online), não deixe o bucket público. Use o <strong>Origin Access Control (OAC)</strong> para que apenas o CloudFront possa ler o bucket. Para o usuário final, gere <strong>CloudFront Signed Cookies</strong> ou <strong>Signed URLs</strong> no seu backend (.NET/PHP/Node) para permitir o acesso temporário ao vídeo.</p><h3>Resumo da Economia</h3><p>Adotando essa arquitetura, você remove a carga de I/O das suas instâncias EC2, reduz o tamanho necessário dos seus servidores de aplicação e paga taxas de armazenamento e transferência muito menores utilizando CDN e classes de armazenamento inteligentes.</p>'
             }
         ],
-        date: '31 de Dezembro, 2025'
+        date: '15/12/2025'
     },
     {
         id: 4,
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[4],
         category: 'Frontend & Design',
         title: 'CSS Level 5 (2025): O Fim do JavaScript para Layout e Interação',
         excerpt: 'De funções nativas e inputs auto-ajustáveis a animações de entrada no DOM. O guia completo das 12 features que revolucionaram o CSS no final de 2025.',
@@ -253,11 +265,11 @@ p { text-wrap: pretty; } /* Evita viúvas em textos longos */`
                 value: '<h3>11. Estilização de Selects (appearance: base-select)</h3><p>Personalização total do elemento <code>&lt;select&gt;</code> mantendo a semântica e acessibilidade nativa.</p><h3>12. View Transitions MPA</h3><p>Transições fluidas entre recarregamentos de páginas reais (Multi-Page Apps), não apenas em SPAs.</p><p><strong>Resumo:</strong> O CSS Level 5 eliminou a necessidade de JavaScript para: cálculos de layout, animações de entrada/saída, popovers, temas simples e hacks de formulário. O frontend nunca foi tão leve.</p>'
             }
         ],
-        date: '31 de Dezembro, 2025'
+        date: '30/11/2025'
     },
     {
         id: 5,
-        image: 'https://images.unsplash.com/photo-1509228627129-666938569312?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[5],
         category: 'Deep Learning & Matemática Aplicada',
         title: 'Anatomia de uma IA: Do Markdown ao Gradiente Descendente (Guia Definitivo)',
         excerpt: 'Um guia híbrido para leigos e experts. Entenda como transformar arquivos de texto em vetores e a matemática exata por trás do "aprendizado" de máquina.',
@@ -404,11 +416,11 @@ print("Treino finalizado. A rede ajustou seus pesos matemáticos.")`
                 value: '<h2>Conclusão</h2><p>O que acabamos de fazer é a base de qualquer LLM moderno (como o GPT). Claro, eles usam arquiteturas <em>Transformers</em> e mecanismos de <em>Attention</em> muito mais complexos, mas o princípio fundamental é o mesmo: <strong>Multiplicação de Matrizes, Cálculo de Erro e Descida do Gradiente.</strong></p><p>Agora, seu microserviço em Node.js pode apenas chamar esse modelo treinado via API, delegando o trabalho pesado matemático para o Python.</p>'
             }
         ],
-        date: '02 de Janeiro, 2026'
+        date: '15/11/2025'
     },
     {
         id: 6,
-        image: 'https://images.unsplash.com/photo-1599507593499-a3f7d7d97663?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[6],
         category: 'Backend & Linguagens',
         title: 'PHP 8.5: O Pipe Operator Chegou, Clone With e a Nova Era das URIs',
         excerpt: 'Mais rápido, limpo e construído para desenvolvedores. O guia completo das features que transformaram a DX do PHP em 2025.',
@@ -510,11 +522,11 @@ $lastEvent = array_last($events);
 public function update() { ... }`
             }
         ],
-        date: '31 de Dezembro, 2025'
+        date: '30/10/2025'
     },
     {
         id: 7,
-        image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[7],
         category: 'Frontend & Arquitetura',
         title: 'Web Components vs. Tradicional: A Guerra do Encapsulamento',
         excerpt: 'Por que grandes empresas estão migrando de "Div Soup" para Custom Elements. Uma comparação técnica sobre escopo de CSS, reutilização e arquitetura.',
@@ -597,11 +609,11 @@ customElements.define('user-card', UserCard);`
                 value: '<h3>3. Comparativo Direto</h3><ul><li><strong>Estilização:</strong> Tradicional depende de complexidade de seletores CSS. Web Components oferecem isolamento nativo (styles dentro do Shadow DOM não afetam o site).</li><li><strong>Reutilização:</strong> Tradicional requer copiar HTML+CSS+JS. Web Components requer apenas importar um arquivo JS e usar a tag.</li><li><strong>Frameworks:</strong> Tradicional briga com frameworks (React/Vue). Web Components são agnósticos — funcionam dentro de React, Vue, Angular ou sem nada.</li></ul><h3>Conclusão</h3><p>A abordagem tradicional é mais rápida para protótipos e sites simples. Porém, para Design Systems e aplicações de grande escala em 2025, os Web Components oferecem a segurança arquitetural que o desenvolvimento web precisava desesperadamente.</p>'
             }
         ],
-        date: '03 de Janeiro, 2026'
+        date: '15/10/2025'
     },
     {
         id: 8,
-        image: 'https://images.unsplash.com/photo-1518773553398-650c184e0bb3?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[8],
         category: 'Legacy & Modernização',
         title: 'Web Components + jQuery: Modernizando o Legado ou Criando um Monstro?',
         excerpt: 'É possível encapsular a biblioteca mais famosa do mundo dentro de Custom Elements? Uma estratégia prática para migrar sistemas antigos sem reescrever tudo.',
@@ -678,11 +690,11 @@ customElements.define('jquery-widget', JqueryWidget);`
                 value: '<h3>Por que fazer isso?</h3><p>Não é sobre performance (carregar o jQuery inteiro para um componente é pesado). É sobre <strong>sobrevivência</strong>.</p><ul><li><strong>Plugins Legados:</strong> Você tem um Datepicker ou Slider complexo em jQuery que a empresa usa há 10 anos? Encapsule-o em uma tag <code>&lt;legacy-datepicker&gt;</code> e use-o na sua aplicação React/Vue nova.</li><li><strong>Equipe:</strong> Permite que desenvolvedores seniores acostumados com jQuery continuem produtivos enquanto aprendem a nova sintaxe de classes ES6.</li></ul><h3>Conclusão</h3><p>Embora não seja o futuro ideal, encapsular jQuery em Web Components é uma ponte sólida para tirar sistemas legados do monólito e levá-los para uma arquitetura de micro-frontends.</p>'
             }
         ],
-        date: '04 de Janeiro, 2026'
+        date: '30/09/2025'
     },
     {
         id: 9,
-        image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[9],
         category: 'Engenharia de Software',
         title: 'As 5 Arquiteturas de Software Essenciais: Do Monólito ao Hexagonal',
         excerpt: 'Não existe bala de prata. Entenda os prós e contras das 5 arquiteturas mais usadas no mercado e veja exemplos de código para cada uma.',
@@ -838,11 +850,11 @@ const core = new OrderCore(new SlackAdapter()); // Plugando o adaptador
 core.process({ id: 1 });`
             }
         ],
-        date: '05 de Janeiro, 2026'
+        date: '15/09/2025'
     },
     {
         id: 10,
-        image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[10],
         category: 'Full Stack & Angular 19',
         title: 'Crie seu Próprio CMS Headless: PHP, Markdown e o Novo Angular 19',
         excerpt: 'Esqueça bancos de dados complexos. Aprenda a criar um blog ultra-rápido lendo arquivos Markdown com PHP e renderizando com a nova sintaxe do Angular 19.',
@@ -979,11 +991,11 @@ export class PostListComponent {
                 value: '<h3>Conclusão</h3><p>Com menos de 50 linhas de código no backend e usando o poder do <code>toSignal</code> e <code>provideHttpClient</code> do Angular 19, criamos um sistema de blog completo. O PHP entrega o JSON cru instantaneamente, e o Angular cuida da experiência rica do usuário.</p>'
             }
         ],
-        date: '06 de Janeiro, 2026'
+        date: '30/08/2025'
     },
     {
         id: 11,
-        image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[11],
         category: 'Full Stack & Arquitetura',
         title: 'A Revolução TanStack: Por que abandonamos o Next.js pelo TanStack Start em 2026',
         excerpt: 'Não é apenas sobre React Query. Descubra como o TanStack Router e o Start criaram a primeira experiência de desenvolvimento verdadeiramente Type-Safe.',
@@ -1066,11 +1078,11 @@ export function Feed() {
                 value: '<h3>4. Por que mudar?</h3><ul><li><strong>Type Safety Real:</strong> Do banco de dados (Prisma/Drizzle) até a prop do componente, nada é <code>any</code>.</li><li><strong>Cache Granular:</strong> O TanStack Query gerencia o cache melhor que o cache de rota do Next.js.</li><li><strong>Search Params:</strong> Validar <code>?page=2&filter=active</code> com tipos estáticos muda o jogo para dashboards complexos.</li></ul><p>O TanStack provou que frameworks não precisam ser caixas pretas mágicas. Eles podem ser bibliotecas bem compostas que você entende e controla.</p>'
             }
         ],
-        date: '07 de Janeiro, 2026'
+        date: '15/08/2025'
     },
     {
         id: 12,
-        image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1200&auto=format&fit=crop',
+        image: postImages[12],
         category: 'Frontend & Svelte',
         title: 'Svelte (Dez 2025): Streaming de Uploads, AST Printing e Nova CLI',
         excerpt: 'O SvelteKit agora suporta streaming de arquivos em formulários, permitindo acesso aos dados antes do fim do upload. Confira as novidades de fim de ano.',
@@ -1111,7 +1123,7 @@ export const actions = {
                 value: '<h3>3. Svelte CLI 2.0 (sv)</h3><p>A linha de comando oficial recebeu melhorias significativas de usabilidade:</p><ul><li><strong>Instalação Rápida:</strong> Agora você pode iniciar um projeto já com integrações usando a flag <code>--add</code>. Exemplo: <code>npx sv create my-app --add tailwindcss</code>.</li><li><strong>Supressão de Alertas:</strong> Para scripts de automação, a flag <code>--no-dir-check</code> permite criar projetos em pastas não vazias sem travar no prompt de confirmação.</li></ul><h3>Breaking Changes (Atenção)</h3><p>Se você usa o método <code>invalid</code> em formulários, note que na versão 2.48.8+ ele deve ser importado explicitamente de <code>@sveltejs/kit</code>, e a opção experimental <code>submitter</code> foi removida da validação de formulários.</p>'
             }
         ],
-        date: '08 de Janeiro, 2026'
+        date: '01/08/2025'
     }
 ];
 
