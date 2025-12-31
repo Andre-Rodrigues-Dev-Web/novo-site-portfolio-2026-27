@@ -71,8 +71,8 @@ export const TechItem = styled.div`
       transition: fill 0.3s ease;
       
       @media (max-width: 768px) {
-          width: 40px;
-          height: 40px;
+          width: 55px;
+          height: 55px;
       }
   }
   

@@ -12,6 +12,7 @@ import WhatsAppButton from '../components/WhatsAppButton';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import profileImg from '../assets/imgs/eu.png';
+import cvFile from '../assets/docs/profile.pdf';
 import {
     Container,
     ContentWrapper,
@@ -46,11 +47,24 @@ const Home = () => {
                         Desenvolvo aplicações web de alta performance, unindo escalabilidade técnica e excelência em UX.
                     </Description>
                     <ButtonGroup>
-                        <Button variant="primary" aria-label="Ver GitHub">
+                        <Button
+                            as="a"
+                            href="https://github.com/Andre-Rodrigues-Dev-Web"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            variant="primary"
+                            aria-label="Ver GitHub"
+                        >
                             Confira meu GitHub
                             <FiGithub />
                         </Button>
-                        <Button variant="secondary" aria-label="Baixar CV">
+                        <Button 
+                            as="a"
+                            href={cvFile}
+                            download="Andre-Laurentino-CV.pdf"
+                            variant="secondary" 
+                            aria-label="Baixar CV"
+                        >
                             Baixar meu CV
                             <FiFileText />
                         </Button>

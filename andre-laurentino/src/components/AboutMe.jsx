@@ -32,9 +32,21 @@ const AboutMe = () => {
                     <InfoBlock>
                         <BlockTitle>Experiência Profissional</BlockTitle>
                         <ExperienceItem>
+                            <Role>CEO</Role>
+                            <Company>GrupoVel</Company>
+                            <Period>Atual • Tempo integral</Period>
+                            <Period>Brasil</Period>
+                        </ExperienceItem>
+                        <ExperienceItem>
+                            <Role>Gerente de Projetos</Role>
+                            <Company>CESBBANKING</Company>
+                            <Period>Atual</Period>
+                            <Period>Brasil</Period>
+                        </ExperienceItem>
+                        <ExperienceItem>
                             <Role>Engenheiro de software sênior</Role>
                             <Company>NTT DATA Europe & Latam — Itaú</Company>
-                            <Period>Agosto de 2021 — Atual • Tempo integral</Period>
+                            <Period>Agosto de 2021 — Outubro de 2025 • Tempo integral</Period>
                             <Period>Brasil</Period>
                         </ExperienceItem>
                     </InfoBlock>
