@@ -48,7 +48,7 @@ const Blog = () => {
         title="Blog"
         description="Artigos sobre desenvolvimento, tecnologia e carreira."
       />
-      <Header onMenuClick={() => setIsSidebarOpen(true)} />
+      <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} isMenuOpen={isSidebarOpen} />
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 
       <ContentWrapper>

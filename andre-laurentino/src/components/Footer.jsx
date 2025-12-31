@@ -60,8 +60,8 @@ const Footer = () => {
 
                 <SocialLinks>
                     <SocialIcon href="https://github.com" target="_blank"><FiGithub /></SocialIcon>
-                    <SocialIcon href="https://linkedin.com" target="_blank"><FiLinkedin /></SocialIcon>
-                    <SocialIcon href="https://instagram.com" target="_blank"><FiInstagram /></SocialIcon>
+                    <SocialIcon href="https://www.linkedin.com/in/andr%C3%A9-laurentino-rodrigues-8b1a3b349/" target="_blank"><FiLinkedin /></SocialIcon>
+                    <SocialIcon href="https://www.instagram.com/andre_rodrigues.soft.eng/" target="_blank"><FiInstagram /></SocialIcon>
                     <SocialIcon href="mailto:andrelaurentinomg@gmail.com"><FiMail /></SocialIcon>
                 </SocialLinks>
             </Content>
